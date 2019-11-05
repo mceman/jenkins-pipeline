@@ -1,6 +1,6 @@
-total= `echo -e "5\n3\m" | jenkinscode.py`
+sucet=`echo -e "5\n3\n" | jenkinscode.py`
 
-if test $total -eq 3
+if test $sucet -eq 8
 then 
   exit 0
 else
