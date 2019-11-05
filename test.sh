@@ -1,4 +1,4 @@
-sucet=`echo -e "5\n3\n" | jenkinscode.py`
+sucet=`echo -e "5\n3\n" | python jenkinscode.py`
 
 if test $sucet -eq 8
 then 
