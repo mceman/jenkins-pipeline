@@ -14,7 +14,13 @@ pipeline {
       stage('deploy') {
         steps {
           echo 'Uploading to server'
+          sh 'echo "Tento subor obsahuje vystup a data" > outputFile.txt'
         }
       }
     }
+  post {
+    always {
+      archiveArtifacts artifacts: 'outputFile.txt', onlyIfSuccessful: true
+    }
+  }
 }
